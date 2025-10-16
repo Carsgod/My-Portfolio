@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Nk Portfolio</title>
+    <meta name="description" content="Privacy Policy for Nk Portfolio - Learn how we collect, use, and protect your personal information">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Page Flip Animation */
+        .page-flip-container {
+            perspective: 1000px;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-flip-book {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+        }
+
+        .page-flip-page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transform-origin: left center;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-flip-page.front {
+            z-index: 2;
+        }
+
+        .page-flip-page.back {
+            transform: rotateY(180deg);
+            z-index: 1;
+        }
+
+        .page-flip-book.flipped .page-flip-page.front {
+            transform: rotateY(-180deg);
+        }
+
+        .page-flip-book.flipped .page-flip-page.back {
+            transform: rotateY(0deg);
+        }
+
+        .policy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .policy-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-family: var(--font-display);
+        }
+
+        .policy-last-updated {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .policy-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(218, 165, 32, 0.05);
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .policy-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .policy-section p, .policy-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .policy-nav {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .policy-nav-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(218, 165, 32, 0.3);
+        }
+
+        .policy-nav-btn:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .policy-content {
+                margin: 1rem;
+                padding: 2rem;
+            }
+
+            .policy-nav {
+                right: 1rem;
+            }
+
+            .policy-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-flip-container">
+        <div class="page-flip-book" id="policyBook">
+            <!-- Front Page -->
+            <div class="page-flip-page front">
+                <div class="policy-content">
+                    <div class="policy-header">
+                        <h1 class="policy-title">Privacy Policy</h1>
+                        <p class="policy-last-updated">Last updated: October 5, 2024</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>1. Introduction and Overview</h3>
+                        <p>Welcome to Nk Portfolio. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.</p>
+                        <p>This Privacy Policy applies to all information collected through our website, mobile applications, and related services. By using our services, you agree to the collection and use of information in accordance with this policy.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>2. Information We Collect</h3>
+                        <h4>2.1 Personal Data</h4>
+                        <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:</p>
+                        <ul>
+                            <li><strong>Identity Data:</strong> includes first name, last name, username or similar identifier, title, date of birth</li>
+                            <li><strong>Contact Data:</strong> includes email address, telephone numbers, billing address, delivery address</li>
+                            <li><strong>Financial Data:</strong> includes payment card details, bank account information, payment history</li>
+                            <li><strong>Transaction Data:</strong> includes details about payments to and from you, contract details</li>
+                        </ul>
+
+                        <h4>2.2 Technical Data</h4>
+                        <p>We also collect technical information automatically when you visit our website:</p>
+                        <ul>
+                            <li>Internet protocol (IP) address, browser type and version, time zone setting and location</li>
+                            <li>Operating system and platform, screen resolution, device information</li>
+                            <li>Referring website addresses, pages visited, time spent on pages</li>
+                            <li>Download errors, length of visits to certain pages, page interaction information</li>
+                        </ul>
+
+                        <h4>2.3 Usage Data</h4>
+                        <p>Information about how you use our website, products, and services:</p>
+                        <ul>
+                            <li>Pages viewed, features used, time spent on the site</li>
+                            <li>Click-through rates, scroll behavior, mouse movements</li>
+                            <li>Search queries, downloads, uploads, shares</li>
+                            <li>Error messages, crash reports, performance metrics</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>3. How We Collect Your Information</h3>
+                        <h4>3.1 Direct Collection</h4>
+                        <p>We collect information directly from you when:</p>
+                        <ul>
+                            <li>You create an account or profile on our website</li>
+                            <li>You make a purchase or request a quote</li>
+                            <li>You subscribe to our newsletter or marketing communications</li>
+                            <li>You contact us through our contact forms or customer support</li>
+                            <li>You participate in surveys, contests, or promotions</li>
+                            <li>You download resources or access premium content</li>
+                        </ul>
+
+                        <h4>3.2 Automated Collection</h4>
+                        <p>We collect information automatically through:</p>
+                        <ul>
+                            <li>Cookies and similar tracking technologies</li>
+                            <li>Web beacons, pixels, and clear GIFs</li>
+                            <li>Server logs and analytics tools</li>
+                            <li>Heat mapping and session recording tools</li>
+                            <li>Crash reporting and error tracking software</li>
+                        </ul>
+
+                        <h4>3.3 Third-Party Sources</h4>
+                        <p>We may receive information about you from:</p>
+                        <ul>
+                            <li>Social media platforms when you connect your accounts</li>
+                            <li>Payment processors and financial institutions</li>
+                            <li>Marketing and analytics partners</li>
+                            <li>Publicly available sources and business directories</li>
+                            <li>Referral partners and affiliates</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>4. How We Use Your Information</h3>
+                        <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+
+                        <h4>4.1 Legitimate Business Purposes</h4>
+                        <ul>
+                            <li><strong>Contract Performance:</strong> Where we need to perform the contract we are about to enter into or have entered into with you</li>
+                            <li><strong>Legitimate Interests:</strong> Where it is necessary for our legitimate interests and your interests and fundamental rights do not override those interests</li>
+                            <li><strong>Legal Compliance:</strong> Where we need to comply with a legal or regulatory obligation</li>
+                            <li><strong>Vital Interests:</strong> Where it is necessary to protect someone's vital interests</li>
+                        </ul>
+
+                        <h4>4.2 Specific Use Cases</h4>
+                        <p>We use your information for:</p>
+                        <ul>
+                            <li>Processing and fulfilling your orders and requests</li>
+                            <li>Managing your account and providing customer support</li>
+                            <li>Sending transactional communications (order confirmations, etc.)</li>
+                            <li>Personalizing your experience and content recommendations</li>
+                            <li>Improving our website, products, and services</li>
+                            <li>Conducting analytics and market research</li>
+                            <li>Preventing fraud and ensuring security</li>
+                            <li>Complying with legal obligations and enforcing our terms</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>5. Information Sharing and Disclosure</h3>
+                        <h4>5.1 When We Share Information</h4>
+                        <p>We may share your personal information in the following situations:</p>
+
+                        <h4>5.2 Service Providers</h4>
+                        <p>We share information with third-party service providers who assist us in:</p>
+                        <ul>
+                            <li>Payment processing (Stripe, PayPal, etc.)</li>
+                            <li>Email and SMS communications (Mailchimp, Twilio, etc.)</li>
+                            <li>Cloud hosting and data storage (AWS, Google Cloud, etc.)</li>
+                            <li>Analytics and performance monitoring (Google Analytics, etc.)</li>
+                            <li>Customer support and helpdesk services</li>
+                            <li>Marketing automation and CRM systems</li>
+                        </ul>
+
+                        <h4>5.3 Business Transfers</h4>
+                        <p>We may share or transfer your information in connection with:</p>
+                        <ul>
+                            <li>Mergers, acquisitions, or business sales</li>
+                            <li>Corporate restructuring or reorganization</li>
+                            <li>Financing due diligence and investment activities</li>
+                            <li>Bankruptcy or insolvency proceedings</li>
+                        </ul>
+
+                        <h4>5.4 Legal Requirements</h4>
+                        <p>We may disclose your information if required to do so by law or if we believe such action is necessary to:</p>
+                        <ul>
+                            <li>Comply with legal process or government requests</li>
+                            <li>Protect our rights, property, or safety</li>
+                            <li>Prevent fraud, abuse, or illegal activity</li>
+                            <li>Enforce our Terms of Service or other agreements</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>6. Data Security and Protection</h3>
+                        <h4>6.1 Security Measures</h4>
+                        <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorised way, altered or disclosed:</p>
+
+                        <h4>6.2 Technical Safeguards</h4>
+                        <ul>
+                            <li><strong>Encryption:</strong> All data is encrypted in transit (HTTPS/TLS) and at rest (AES-256)</li>
+                            <li><strong>Access Controls:</strong> Multi-factor authentication, role-based access, principle of least privilege</li>
+                            <li><strong>Network Security:</strong> Firewalls, intrusion detection systems, DDoS protection</li>
+                            <li><strong>Monitoring:</strong> 24/7 security monitoring, automated threat detection, regular security audits</li>
+                        </ul>
+
+                        <h4>6.3 Physical and Operational Security</h4>
+                        <ul>
+                            <li>Secure data centers with biometric access controls</li>
+                            <li>Regular security training for all employees</li>
+                            <li>Incident response plans and breach notification procedures</li>
+                            <li>Regular backups with offsite storage and encryption</li>
+                        </ul>
+
+                        <h4>6.4 Data Retention</h4>
+                        <p>We will only retain your personal data for as long as necessary to fulfill the purposes we collected it for:</p>
+                        <ul>
+                            <li><strong>Account Data:</strong> Retained while account is active, deleted within 30 days of account closure</li>
+                            <li><strong>Transaction Data:</strong> Retained for 7 years for tax and accounting purposes</li>
+                            <li><strong>Marketing Data:</strong> Retained until you unsubscribe or withdraw consent</li>
+                            <li><strong>Analytics Data:</strong> Anonymized after 26 months</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>7. International Data Transfers</h3>
+                        <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from the laws of your country.</p>
+
+                        <h4>7.1 Safeguards for International Transfers</h4>
+                        <p>When we transfer your data internationally, we ensure appropriate safeguards are in place:</p>
+                        <ul>
+                            <li>Adequacy decisions by relevant data protection authorities</li>
+                            <li>Standard contractual clauses approved by the European Commission</li>
+                            <li>Binding corporate rules for intra-group transfers</li>
+                            <li>Certification schemes and codes of conduct</li>
+                        </ul>
+
+                        <h4>7.2 Specific Transfer Mechanisms</h4>
+                        <p>We use the following mechanisms for international data transfers:</p>
+                        <ul>
+                            <li><strong>EU-US Privacy Shield:</strong> For transfers to certified US companies</li>
+                            <li><strong>Standard Contractual Clauses:</strong> For transfers to non-adequate countries</li>
+                            <li><strong>Binding Corporate Rules:</strong> For intra-group international transfers</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>8. Your Legal Rights and Choices</h3>
+                        <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data:</p>
+
+                        <h4>8.1 Access Rights</h4>
+                        <ul>
+                            <li><strong>Right of Access:</strong> Request copies of your personal data</li>
+                            <li><strong>Right to Confirmation:</strong> Confirm if we are processing your data</li>
+                            <li><strong>Right to Information:</strong> Receive information about our processing activities</li>
+                        </ul>
+
+                        <h4>8.2 Correction and Modification Rights</h4>
+                        <ul>
+                            <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
+                            <li><strong>Right to Completion:</strong> Complete incomplete personal data</li>
+                            <li><strong>Right to Update:</strong> Update your information through your account</li>
+                        </ul>
+
+                        <h4>8.3 Erasure and Restriction Rights</h4>
+                        <ul>
+                            <li><strong>Right to Erasure:</strong> Request deletion of your personal data (right to be forgotten)</li>
+                            <li><strong>Right to Restriction:</strong> Limit how we process your data</li>
+                            <li><strong>Right to Object:</strong> Object to processing based on legitimate interests</li>
+                        </ul>
+
+                        <h4>8.4 Data Portability and Withdraw Rights</h4>
+                        <ul>
+                            <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format</li>
+                            <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time for consent-based processing</li>
+                            <li><strong>Right to Object to Marketing:</strong> Object to direct marketing communications</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>9. Cookies and Tracking Technologies</h3>
+                        <p>We use cookies and similar tracking technologies to collect and use personal data about you. For more information about the cookies we use, please see our separate Cookie Policy.</p>
+
+                        <h4>9.1 Cookie Categories</h4>
+                        <ul>
+                            <li><strong>Strictly Necessary:</strong> Essential for website functionality</li>
+                            <li><strong>Performance:</strong> Help us understand website usage</li>
+                            <li><strong>Functional:</strong> Remember your preferences and settings</li>
+                            <li><strong>Targeting:</strong> Used for advertising and marketing</li>
+                        </ul>
+
+                        <h4>9.2 Managing Cookies</h4>
+                        <p>You can control cookies through:</p>
+                        <ul>
+                            <li>Your browser settings and preferences</li>
+                            <li>Our cookie consent management tool</li>
+                            <li>Third-party opt-out mechanisms</li>
+                            <li>Global Privacy Control (GPC) signals</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>10. Children's Privacy</h3>
+                        <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
+
+                        <h4>10.1 Age Verification</h4>
+                        <p>We take the following measures to verify age:</p>
+                        <ul>
+                            <li>Self-declaration during account registration</li>
+                            <li>Age verification through payment information</li>
+                            <li>Parental consent for users under 16</li>
+                            <li>Regular monitoring and content filtering</li>
+                        </ul>
+
+                        <h4>10.2 If We Discover Child Data</h4>
+                        <p>If we become aware that we have collected personal data from a child under 13:</p>
+                        <ul>
+                            <li>We will immediately delete the information</li>
+                            <li>We will prevent further collection from that user</li>
+                            <li>We will notify parents if contact information is available</li>
+                            <li>We will cooperate with regulatory authorities</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>11. Third-Party Links and Services</h3>
+                        <p>Our website may contain links to third-party websites, applications, and services that are not operated by us. This Privacy Policy does not apply to those external sites.</p>
+
+                        <h4>11.1 External Websites</h4>
+                        <p>When you click on links to external websites:</p>
+                        <ul>
+                            <li>We are not responsible for their privacy practices</li>
+                            <li>We encourage you to review their privacy policies</li>
+                            <li>We may receive information about your visit through referral headers</li>
+                            <li>Some integrations may share data for functionality</li>
+                        </ul>
+
+                        <h4>11.2 Social Media Integration</h4>
+                        <p>When you interact with our social media features:</p>
+                        <ul>
+                            <li>Social media platforms may collect information about you</li>
+                            <li>Your interactions may be visible to other users</li>
+                            <li>We may receive analytics data from social platforms</li>
+                            <li>Social login creates a connection between platforms</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>12. Data Breach Notification</h3>
+                        <p>We are committed to notifying you and relevant authorities in the event of a data breach that affects your personal information.</p>
+
+                        <h4>12.1 Breach Response Plan</h4>
+                        <p>In the event of a data breach, we will:</p>
+                        <ul>
+                            <li>Assess the nature and scope of the breach within 24 hours</li>
+                            <li>Contain the breach and prevent further unauthorized access</li>
+                            <li>Evaluate the risks to affected individuals</li>
+                            <li>Notify affected users within 72 hours if required by law</li>
+                            <li>Notify relevant supervisory authorities as required</li>
+                            <li>Provide guidance on protective steps users can take</li>
+                        </ul>
+
+                        <h4>12.2 Notification Timeline</h4>
+                        <p>We will notify you:</p>
+                        <ul>
+                            <li><strong>High Risk Breaches:</strong> Within 72 hours of discovery</li>
+                            <li><strong>Medium Risk Breaches:</strong> Within 30 days</li>
+                            <li><strong>Low Risk Breaches:</strong> In our next regular security update</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>13. Changes to This Privacy Policy</h3>
+                        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law.</p>
+
+                        <h4>13.1 Notification of Changes</h4>
+                        <p>When we make material changes, we will:</p>
+                        <ul>
+                            <li>Notify you by email (if you have an account)</li>
+                            <li>Post a prominent notice on our website</li>
+                            <li>Update the "Last Updated" date at the top of this policy</li>
+                            <li>Provide a summary of key changes</li>
+                            <li>Give you time to review before changes take effect</li>
+                        </ul>
+
+                        <h4>13.2 Your Continued Use</h4>
+                        <p>By continuing to use our services after changes become effective, you agree to be bound by the revised Privacy Policy.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>14. Data Protection Officer</h3>
+                        <p>We have appointed a Data Protection Officer (DPO) who is responsible for overseeing questions in relation to this Privacy Policy.</p>
+
+                        <h4>14.1 DPO Contact Information</h4>
+                        <p>If you have any questions about this Privacy Policy or our privacy practices:</p>
+                        <ul>
+                            <li><strong>Data Protection Officer:</strong> Nana Kwesi Carson</li>
+                            <li><strong>Email:</strong> carsonleuders901@gmail.com</li>
+                            <li><strong>Phone:</strong> +233 595 759 917</li>
+                            <li><strong>Address:</strong> Accra, Ghana</li>
+                            <li><strong>Response Time:</strong> We aim to respond within 30 days</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>15. Supervisory Authority Contact</h3>
+                        <p>If you are not satisfied with our response to your privacy concerns, you have the right to lodge a complaint with the relevant supervisory authority.</p>
+
+                        <h4>15.1 Ghana Data Protection Commission</h4>
+                        <p>For users in Ghana:</p>
+                        <ul>
+                            <li><strong>Authority:</strong> Data Protection Commission, Ghana</li>
+                            <li><strong>Website:</strong> https://www.dataprotection.org.gh</li>
+                            <li><strong>Email:</strong> info@dataprotection.org.gh</li>
+                            <li><strong>Phone:</strong> +233 30 266 3613</li>
+                        </ul>
+
+                        <h4>15.2 European Data Protection Authorities</h4>
+                        <p>For users in the European Union, you can contact your local data protection authority or the lead supervisory authority in the Netherlands.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>16. Definitions and Legal References</h3>
+                        <h4>16.1 Key Terms</h4>
+                        <ul>
+                            <li><strong>Personal Data:</strong> Any information relating to an identified or identifiable natural person</li>
+                            <li><strong>Processing:</strong> Any operation performed on personal data</li>
+                            <li><strong>Controller:</strong> The entity that determines the purposes and means of processing</li>
+                            <li><strong>Processor:</strong> The entity that processes data on behalf of the controller</li>
+                            <li><strong>Data Subject:</strong> The individual to whom the personal data relates</li>
+                            <li><strong>Consent:</strong> Freely given, specific, informed, and unambiguous agreement</li>
+                        </ul>
+
+                        <h4>16.2 Legal Framework</h4>
+                        <p>This Privacy Policy is governed by:</p>
+                        <ul>
+                            <li><strong>GDPR:</strong> General Data Protection Regulation (EU) 2016/679</li>
+                            <li><strong>Data Protection Act 2012 (Ghana):</strong> Act 843</li>
+                            <li><strong>CCPA:</strong> California Consumer Privacy Act</li>
+                            <li><strong>PIPEDA:</strong> Personal Information Protection and Electronic Documents Act (Canada)</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>17. Contact Information</h3>
+                        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us using the information below:</p>
+
+                        <div style="background: rgba(218, 165, 32, 0.1); padding: 1.5rem; border-radius: 0.5rem; margin-top: 1rem;">
+                            <h4 style="margin-top: 0; color: var(--primary-color);">Nk Portfolio</h4>
+                            <p><strong>Email:</strong> carsonleuders901@gmail.com</p>
+                            <p><strong>Phone:</strong> +233 595 759 917</p>
+                            <p><strong>Address:</strong> Accra, Ghana</p>
+                            <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM GMT</p>
+                        </div>
+
+                        <p>We will respond to your inquiry within 30 days of receipt. For urgent privacy matters, please mark your communication as "URGENT" in the subject line.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Page (Contact Form) -->
+            <div class="page-flip-page back">
+                <div class="policy-content">
+                    <div class="policy-header">
+                        <h1 class="policy-title">Contact Us</h1>
+                        <p>Have questions about our privacy policy? Get in touch with us.</p>
+                    </div>
+
+                    <form class="contact-form" style="max-width: 500px; margin: 0 auto;">
+                        <div class="form-group">
+                            <label for="contact-name">Name *</label>
+                            <input type="text" id="contact-name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email *</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Subject *</label>
+                            <input type="text" id="contact-subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message *</label>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="policy-nav">
+            <a href="terms-of-service.html" class="policy-nav-btn" title="Terms of Service">
+                <i class="fas fa-file-contract"></i>
+            </a>
+            <a href="cookie-policy.html" class="policy-nav-btn" title="Cookie Policy">
+                <i class="fas fa-cookie-bite"></i>
+            </a>
+            <button class="policy-nav-btn" onclick="flipPolicyPage()" title="Flip Page">
+                <i class="fas fa-exchange-alt"></i>
+            </button>
+            <a href="index.html" class="policy-nav-btn" title="Back to Portfolio">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function flipPolicyPage() {
+            const book = document.getElementById('policyBook');
+            book.classList.toggle('flipped');
+        }
+
+        // Auto-flip after 5 seconds for demo
+        setTimeout(() => {
+            if (!document.getElementById('policyBook').classList.contains('flipped')) {
+                flipPolicyPage();
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

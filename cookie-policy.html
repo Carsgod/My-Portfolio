@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Nk Portfolio</title>
+    <meta name="description" content="Cookie Policy for Nk Portfolio - Learn about how we use cookies on our website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Page Flip Animation */
+        .page-flip-container {
+            perspective: 1200px;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-flip-book {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+        }
+
+        .page-flip-page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transform-origin: left center;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 2rem;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .page-flip-page.front {
+            z-index: 2;
+        }
+
+        .page-flip-page.back {
+            transform: rotateY(180deg);
+            z-index: 1;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+
+        .page-flip-book.flipped .page-flip-page.front {
+            transform: rotateY(-180deg);
+        }
+
+        .page-flip-book.flipped .page-flip-page.back {
+            transform: rotateY(0deg);
+        }
+
+        .policy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .policy-content.dark {
+            background: rgba(17, 24, 39, 0.95);
+            color: #e5e5e5;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .policy-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-family: var(--font-display);
+        }
+
+        .policy-last-updated {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .policy-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(218, 165, 32, 0.05);
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .policy-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .policy-section p, .policy-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .policy-content.dark .policy-section {
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .policy-content.dark .policy-section h3 {
+            color: var(--primary-light);
+        }
+
+        .policy-content.dark .policy-section p,
+        .policy-content.dark .policy-section li {
+            color: #b3b3b3;
+            font-size: 1rem;
+        }
+
+        .cookie-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .cookie-category {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(218, 165, 32, 0.2);
+        }
+
+        .cookie-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .cookie-category p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .policy-nav {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .policy-nav-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(218, 165, 32, 0.3);
+        }
+
+        .policy-nav-btn:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .policy-content {
+                margin: 1rem;
+                padding: 2rem;
+            }
+
+            .policy-nav {
+                right: 1rem;
+            }
+
+            .policy-title {
+                font-size: 2rem;
+            }
+
+            .cookie-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-flip-container">
+        <div class="page-flip-book" id="cookieBook">
+            <!-- Front Page -->
+            <div class="page-flip-page front">
+                <div class="policy-content">
+                    <div class="policy-header">
+                        <h1 class="policy-title">🍪 Cookie Policy</h1>
+                        <p class="policy-last-updated">Last updated: October 5, 2024</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>1. Introduction and Overview</h3>
+                        <p>This Cookie Policy explains how Nk Portfolio ("we," "us," "our") uses cookies and similar tracking technologies when you visit our website, use our mobile applications, or interact with our online services.</p>
+
+                        <h4>1.1 What This Policy Covers</h4>
+                        <p>This policy covers:</p>
+                        <ul>
+                            <li>All types of cookies and tracking technologies we use</li>
+                            <li>How we collect and use information through cookies</li>
+                            <li>Your choices and rights regarding cookie usage</li>
+                            <li>How to manage and control cookie preferences</li>
+                            <li>Third-party cookies and integrations</li>
+                        </ul>
+
+                        <h4>1.2 Legal Compliance</h4>
+                        <p>This Cookie Policy complies with:</p>
+                        <ul>
+                            <li>EU ePrivacy Directive and GDPR requirements</li>
+                            <li>California Consumer Privacy Act (CCPA)</li>
+                            <li>Data Protection Act 2012 (Ghana)</li>
+                            <li>Other applicable privacy legislation</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>2. What Are Cookies and Tracking Technologies</h3>
+                        <h4>2.1 Definition of Cookies</h4>
+                        <p>Cookies are small text files that are used to store small pieces of information. They are stored on your device when the website is loaded on your browser. Cookies help us make the website function properly, make it more secure, provide better user experience, and understand how the website performs.</p>
+
+                        <h4>2.2 Types of Cookies by Duration</h4>
+                        <ul>
+                            <li><strong>Session Cookies:</strong> Temporary cookies that expire when you close your browser</li>
+                            <li><strong>Permanent Cookies:</strong> Cookies that remain on your device for a set period or until deleted</li>
+                            <li><strong>Flash Cookies:</strong> Also known as Local Shared Objects, used by Flash applications</li>
+                        </ul>
+
+                        <h4>2.3 Other Tracking Technologies</h4>
+                        <p>In addition to cookies, we may use:</p>
+                        <ul>
+                            <li><strong>Web Beacons:</strong> Small transparent images that track page views</li>
+                            <li><strong>Pixels:</strong> Tiny invisible images used for tracking and analytics</li>
+                            <li><strong>Local Storage:</strong> HTML5 storage for client-side data persistence</li>
+                            <li><strong>Session Storage:</strong> Temporary browser storage for session data</li>
+                            <li><strong>Fingerprints:</strong> Device and browser characteristic collection</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>3. How We Use Cookies</h3>
+                        <p>We use cookies for several reasons, categorized by their purpose and necessity:</p>
+
+                        <h4>3.1 Essential Cookies (Strictly Necessary)</h4>
+                        <p>Required for the website to function properly. They cannot be switched off in our systems.</p>
+                        <ul>
+                            <li><strong>Authentication:</strong> Maintain login sessions and user authentication</li>
+                            <li><strong>Security:</strong> Protect against CSRF attacks and malicious activities</li>
+                            <li><strong>Load Balancing:</strong> Distribute traffic across servers for optimal performance</li>
+                            <li><strong>Form Data:</strong> Temporarily store form data during completion</li>
+                        </ul>
+
+                        <h4>3.2 Analytics Cookies (Performance)</h4>
+                        <p>Help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
+                        <ul>
+                            <li><strong>Google Analytics:</strong> Tracks page views, user behavior, and conversion metrics</li>
+                            <li><strong>Heat Mapping:</strong> Records mouse movements and scroll behavior</li>
+                            <li><strong>Performance Monitoring:</strong> Measures site speed and user experience</li>
+                            <li><strong>Error Tracking:</strong> Identifies and reports website issues</li>
+                        </ul>
+
+                        <h4>3.3 Functionality Cookies (Preferences)</h4>
+                        <p>Enable the website to provide enhanced functionality and personalisation.</p>
+                        <ul>
+                            <li><strong>Language Settings:</strong> Remember your preferred language</li>
+                            <li><strong>Theme Preferences:</strong> Store dark/light mode preferences</li>
+                            <li><strong>Layout Settings:</strong> Remember customized interface preferences</li>
+                            <li><strong>Search History:</strong> Store recent searches for quick access</li>
+                        </ul>
+
+                        <h4>3.4 Marketing Cookies (Targeting)</h4>
+                        <p>Used to deliver relevant advertisements and track the effectiveness of our marketing campaigns.</p>
+                        <ul>
+                            <li><strong>Ad Targeting:</strong> Show personalized advertisements based on interests</li>
+                            <li><strong>Social Media:</strong> Enable social media sharing and integration</li>
+                            <li><strong>Retargeting:</strong> Display relevant ads on other websites</li>
+                            <li><strong>Affiliate Tracking:</strong> Track referrals and affiliate conversions</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>4. Cookie Categories and Details</h3>
+                        <div class="cookie-categories">
+                            <div class="cookie-category">
+                                <h4>🍪 Essential Cookies</h4>
+                                <p><strong>Purpose:</strong> These cookies are necessary for the website to function properly. They cannot be switched off in our systems.</p>
+                                <p><strong>Legal Basis:</strong> Legitimate interest and contract performance</p>
+                                <p><strong>Examples:</strong></p>
+                                <ul>
+                                    <li>Session management cookies</li>
+                                    <li>Security tokens and CSRF protection</li>
+                                    <li>Load balancer cookies</li>
+                                    <li>Shopping cart functionality</li>
+                                </ul>
+                                <p><strong>Duration:</strong> Session to 1 year</p>
+                            </div>
+
+                            <div class="cookie-category">
+                                <h4>📊 Analytics Cookies</h4>
+                                <p><strong>Purpose:</strong> These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.</p>
+                                <p><strong>Legal Basis:</strong> Consent (where required by law)</p>
+                                <p><strong>Examples:</strong></p>
+                                <ul>
+                                    <li>Google Analytics tracking</li>
+                                    <li>Hotjar heat mapping</li>
+                                    <li>Mixpanel event tracking</li>
+                                    <li>Error monitoring tools</li>
+                                </ul>
+                                <p><strong>Duration:</strong> 1 day to 2 years</p>
+                            </div>
+
+                            <div class="cookie-category">
+                                <h4>⚙️ Functionality Cookies</h4>
+                                <p><strong>Purpose:</strong> These cookies enable the website to provide enhanced functionality and personalisation.</p>
+                                <p><strong>Legal Basis:</strong> Consent</p>
+                                <p><strong>Examples:</strong></p>
+                                <ul>
+                                    <li>Language preference cookies</li>
+                                    <li>Theme selection cookies</li>
+                                    <li>Customized layout preferences</li>
+                                    <li>Form auto-fill data</li>
+                                </ul>
+                                <p><strong>Duration:</strong> Session to 1 year</p>
+                            </div>
+
+                            <div class="cookie-category">
+                                <h4>🎯 Marketing Cookies</h4>
+                                <p><strong>Purpose:</strong> These cookies may be set through our site by our advertising partners to build a profile of your interests.</p>
+                                <p><strong>Legal Basis:</strong> Consent</p>
+                                <p><strong>Examples:</strong></p>
+                                <ul>
+                                    <li>Facebook Pixel tracking</li>
+                                    <li>Google Ads remarketing</li>
+                                    <li>LinkedIn Insight Tag</li>
+                                    <li>Affiliate tracking cookies</li>
+                                </ul>
+                                <p><strong>Duration:</strong> 1 day to 2 years</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>5. Third-Party Cookies and Integrations</h3>
+                        <h4>5.1 Third-Party Services</h4>
+                        <p>Some cookies may be set by third-party services that appear on our pages. We have no control over these cookies, and you should check the relevant third party's website for more information about their cookies.</p>
+
+                        <h4>5.2 Analytics Providers</h4>
+                        <ul>
+                            <li><strong>Google Analytics:</strong> Provides website analytics and user behavior insights</li>
+                            <li><strong>Hotjar:</strong> Offers heat mapping and user session recordings</li>
+                            <li><strong>Mixpanel:</strong> Tracks user interactions and product analytics</li>
+                            <li><strong>FullStory:</strong> Records user sessions for UX analysis</li>
+                        </ul>
+
+                        <h4>5.3 Marketing Partners</h4>
+                        <ul>
+                            <li><strong>Facebook:</strong> Social media integration and advertising</li>
+                            <li><strong>Google Ads:</strong> Search and display advertising</li>
+                            <li><strong>LinkedIn:</strong> Professional networking and B2B marketing</li>
+                            <li><strong>Twitter:</strong> Social sharing and advertising</li>
+                        </ul>
+
+                        <h4>5.4 Technical Integrations</h4>
+                        <ul>
+                            <li><strong>Cloudflare:</strong> CDN and security services</li>
+                            <li><strong>AWS:</strong> Cloud hosting and storage</li>
+                            <li><strong>Stripe:</strong> Payment processing</li>
+                            <li><strong>Mailchimp:</strong> Email marketing</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>6. Managing Cookies and Your Choices</h3>
+                        <h4>6.1 Browser Settings</h4>
+                        <p>You can control and manage cookies in various ways. Please note that removing or blocking cookies can negatively affect your user experience and parts of our website may no longer be fully accessible.</p>
+
+                        <h4>6.2 How to Control Cookies</h4>
+                        <p>Most web browsers automatically accept cookies, but you can modify your browser setting to decline cookies if you prefer:</p>
+                        <ul>
+                            <li><strong>Chrome:</strong> Settings > Privacy and security > Cookies and other site data</li>
+                            <li><strong>Firefox:</strong> Settings > Privacy & Security > Cookies and Site Data</li>
+                            <li><strong>Safari:</strong> Preferences > Privacy > Manage Website Data</li>
+                            <li><strong>Edge:</strong> Settings > Cookies and site permissions</li>
+                        </ul>
+
+                        <h4>6.3 Our Cookie Management Tool</h4>
+                        <p>We provide a cookie consent management tool that allows you to:</p>
+                        <ul>
+                            <li>View all cookies used on our website</li>
+                            <li>Enable or disable non-essential cookies</li>
+                            <li>Customize your cookie preferences</li>
+                            <li>Withdraw consent at any time</li>
+                        </ul>
+
+                        <h4>6.4 Global Privacy Control</h4>
+                        <p>We honor the Global Privacy Control (GPC) signal:</p>
+                        <ul>
+                            <li>If GPC is enabled in your browser, we will treat it as a cookie opt-out</li>
+                            <li>GPC signal takes precedence over other cookie settings</li>
+                            <li>You can enable GPC in supported browsers and extensions</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>7. Technical Details and Implementation</h3>
+                        <h4>7.1 Cookie Attributes</h4>
+                        <p>Our cookies use the following standard attributes:</p>
+                        <ul>
+                            <li><strong>Domain:</strong> Specifies which domains can access the cookie</li>
+                            <li><strong>Path:</strong> Specifies which pages can access the cookie</li>
+                            <li><strong>Secure:</strong> Ensures cookies are only sent over HTTPS</li>
+                            <li><strong>HttpOnly:</strong> Prevents JavaScript access for security</li>
+                            <li><strong>SameSite:</strong> Controls cross-site request behavior</li>
+                        </ul>
+
+                        <h4>7.2 First-Party vs Third-Party Cookies</h4>
+                        <ul>
+                            <li><strong>First-Party Cookies:</strong> Set directly by our website domain</li>
+                            <li><strong>Third-Party Cookies:</strong> Set by domains other than the one you're visiting</li>
+                            <li><strong>Session Cookies:</strong> Exist only while browser is open</li>
+                            <li><strong>Persistent Cookies:</strong> Remain on your device after browser closes</li>
+                        </ul>
+
+                        <h4>7.3 Local Storage and Similar Technologies</h4>
+                        <p>In addition to cookies, we may use:</p>
+                        <ul>
+                            <li><strong>Local Storage:</strong> Stores data with no expiration date</li>
+                            <li><strong>Session Storage:</strong> Stores data for browser session only</li>
+                            <li><strong>IndexedDB:</strong> Client-side database for larger data storage</li>
+                            <li><strong>WebSQL:</strong> Legacy client-side database (deprecated)</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>8. Data Collection and Usage</h3>
+                        <h4>8.1 Information Collected</h4>
+                        <p>Through cookies and tracking technologies, we may collect:</p>
+                        <ul>
+                            <li>IP address and geolocation data</li>
+                            <li>Browser type, version, and language settings</li>
+                            <li>Operating system and device information</li>
+                            <li>Pages visited and time spent on each page</li>
+                            <li>Referring websites and exit pages</li>
+                            <li>Click patterns and scroll behavior</li>
+                        </ul>
+
+                        <h4>8.2 How We Use Collected Data</h4>
+                        <p>We use this information to:</p>
+                        <ul>
+                            <li>Improve website performance and user experience</li>
+                            <li>Analyze traffic patterns and user behavior</li>
+                            <li>Personalize content and recommendations</li>
+                            <li>Debug technical issues and errors</li>
+                            <li>Prevent fraud and ensure security</li>
+                            <li>Comply with legal obligations</li>
+                        </ul>
+
+                        <h4>8.3 Data Sharing</h4>
+                        <p>We may share cookie data with:</p>
+                        <ul>
+                            <li>Analytics service providers (with anonymization)</li>
+                            <li>Marketing partners (with your consent)</li>
+                            <li>Legal authorities (when required by law)</li>
+                            <li>Service providers under data processing agreements</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>9. Children's Privacy and Cookies</h3>
+                        <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13 through cookies or tracking technologies.</p>
+
+                        <h4>9.1 Age Verification</h4>
+                        <p>We implement age verification measures:</p>
+                        <ul>
+                            <li>COPPA compliance for US users under 13</li>
+                            <li>GDPR compliance for EU users under 16</li>
+                            <li>Parental consent requirements where applicable</li>
+                            <li>Automatic filtering of underage users</li>
+                        </ul>
+
+                        <h4>9.2 If We Discover Child Data</h4>
+                        <p>If we become aware of collecting data from children:</p>
+                        <ul>
+                            <li>We will immediately delete the information</li>
+                            <li>We will prevent further collection from that user</li>
+                            <li>We will notify parents if contact information is available</li>
+                            <li>We will cooperate with regulatory authorities</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>10. International Data Transfers</h3>
+                        <p>Cookie data may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from the laws of your country.</p>
+
+                        <h4>10.1 Transfer Mechanisms</h4>
+                        <p>When we transfer cookie data internationally:</p>
+                        <ul>
+                            <li><strong>Adequacy Decisions:</strong> Transfers to countries with adequate protection</li>
+                            <li><strong>Standard Contractual Clauses:</strong> Approved by European Commission</li>
+                            <li><strong>Binding Corporate Rules:</strong> For intra-group transfers</li>
+                            <li><strong>Privacy Shield:</strong> For transfers to certified US companies</li>
+                        </ul>
+
+                        <h4>10.2 Specific Jurisdictions</h4>
+                        <p>Cookie data may be processed in:</p>
+                        <ul>
+                            <li><strong>United States:</strong> For analytics and marketing services</li>
+                            <li><strong>European Union:</strong> For GDPR-compliant processing</li>
+                            <li><strong>Ghana:</strong> For local data residency requirements</li>
+                            <li><strong>Canada:</strong> For PIPEDA-compliant processing</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>11. Security and Cookie Protection</h3>
+                        <h4>11.1 Secure Cookie Implementation</h4>
+                        <p>All cookies are implemented with security best practices:</p>
+                        <ul>
+                            <li><strong>Secure Flag:</strong> Cookies only sent over HTTPS connections</li>
+                            <li><strong>HttpOnly Flag:</strong> Prevents JavaScript access to sensitive cookies</li>
+                            <li><strong>SameSite Attribute:</strong> Controls cross-site request behavior</li>
+                            <li><strong>Domain Restrictions:</strong> Limits cookie access to specific domains</li>
+                        </ul>
+
+                        <h4>11.2 Protection Measures</h4>
+                        <p>We protect cookie data through:</p>
+                        <ul>
+                            <li>Encryption of cookie values where sensitive</li>
+                            <li>Regular security audits and vulnerability assessments</li>
+                            <li>Access controls and authentication requirements</li>
+                            <li>Secure server configurations and firewalls</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>12. Your Rights and Controls</h3>
+                        <h4>12.1 Right to Information</h4>
+                        <p>You have the right to:</p>
+                        <ul>
+                            <li>Know what cookies are set on your device</li>
+                            <li>Understand the purpose of each cookie</li>
+                            <li>Know the third parties setting cookies</li>
+                            <li>Receive information about data processing</li>
+                        </ul>
+
+                        <h4>12.2 Right to Consent and Withdraw</h4>
+                        <p>You have the right to:</p>
+                        <ul>
+                            <li>Give or withhold consent for non-essential cookies</li>
+                            <li>Withdraw consent at any time</li>
+                            <li>Change your cookie preferences</li>
+                            <li>Opt-out of specific cookie categories</li>
+                        </ul>
+
+                        <h4>12.3 Right to Access and Deletion</h4>
+                        <p>You have the right to:</p>
+                        <ul>
+                            <li>Request information about cookies we use</li>
+                            <li>Access data collected through cookies</li>
+                            <li>Request deletion of your cookie data</li>
+                            <li>Export your cookie preferences</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>13. Updates to This Policy</h3>
+                        <p>We may update this Cookie Policy from time to time in order to reflect changes to the cookies we use or for other operational, legal, or regulatory reasons.</p>
+
+                        <h4>13.1 Notification of Changes</h4>
+                        <p>When we make material changes, we will:</p>
+                        <ul>
+                            <li>Update the "Last Updated" date at the top of this policy</li>
+                            <li>Notify you through our cookie consent banner</li>
+                            <li>Send email notifications to registered users</li>
+                            <li>Post announcements on our website</li>
+                        </ul>
+
+                        <h4>13.2 Version History</h4>
+                        <p>Previous versions of this policy:</p>
+                        <ul>
+                            <li><strong>Version 1.0:</strong> October 5, 2024 - Initial comprehensive policy</li>
+                            <li><strong>Draft versions:</strong> Available upon request</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>14. Contact Information</h3>
+                        <p>If you have any questions about our use of cookies or this policy, please contact us:</p>
+
+                        <div style="background: rgba(218, 165, 32, 0.1); padding: 1.5rem; border-radius: 0.5rem; margin-top: 1rem;">
+                            <h4 style="margin-top: 0; color: var(--primary-color);">Nk Portfolio</h4>
+                            <p><strong>Email:</strong> carsonleuders901@gmail.com</p>
+                            <p><strong>Phone:</strong> +233 595 759 917</p>
+                            <p><strong>Address:</strong> Accra, Ghana</p>
+                            <p><strong>Response Time:</strong> We aim to respond within 2 business days</p>
+                        </div>
+
+                        <p>For urgent cookie-related matters, please mark your communication as "URGENT - COOKIE INQUIRY" in the subject line.</p>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>15. Legal and Regulatory Information</h3>
+                        <h4>15.1 Applicable Laws</h4>
+                        <p>This Cookie Policy is governed by:</p>
+                        <ul>
+                            <li><strong>ePrivacy Directive (EU):</strong> Directive 2002/58/EC as amended</li>
+                            <li><strong>GDPR (EU):</strong> General Data Protection Regulation</li>
+                            <li><strong>CCPA (California):</strong> California Consumer Privacy Act</li>
+                            <li><strong>Data Protection Act (Ghana):</strong> Act 843</li>
+                        </ul>
+
+                        <h4>15.2 Supervisory Authorities</h4>
+                        <p>You may contact relevant authorities:</p>
+                        <ul>
+                            <li><strong>EU:</strong> Your local data protection authority</li>
+                            <li><strong>Ghana:</strong> Data Protection Commission</li>
+                            <li><strong>California:</strong> California Privacy Protection Agency</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section">
+                        <h3>16. Technical Implementation Details</h3>
+                        <h4>16.1 Cookie Banner Implementation</h4>
+                        <p>Our cookie consent banner:</p>
+                        <ul>
+                            <li>Complies with IAB Transparency and Consent Framework</li>
+                            <li>Uses explicit consent for non-essential cookies</li>
+                            <li>Provides granular control over cookie categories</li>
+                            <li>Stores preferences in localStorage for persistence</li>
+                        </ul>
+
+                        <h4>16.2 Cookie Scanning and Detection</h4>
+                        <p>We use automated tools to:</p>
+                        <ul>
+                            <li>Scan our website for all cookies in use</li>
+                            <li>Categorize cookies by purpose and provider</li>
+                            <li>Monitor cookie compliance continuously</li>
+                            <li>Generate cookie reports for audits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Page (Cookie Settings Demo) -->
+            <div class="page-flip-page back">
+                <div class="policy-content dark">
+                    <div class="policy-header">
+                        <h1 class="policy-title" style="color: var(--primary-light);">🍪 Cookie Settings</h1>
+                        <p>Manage your cookie preferences</p>
+                    </div>
+
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <div class="cookie-option" style="background: rgba(255, 215, 0, 0.1); padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <label style="color: var(--primary-light); font-weight: bold;">Essential Cookies</label>
+                                <span style="background: var(--primary-color); color: white; padding: 0.2rem 0.5rem; border-radius: 0.3rem; font-size: 0.8rem;">Required</span>
+                            </div>
+                            <p style="color: #888; font-size: 0.9rem;">Necessary cookies for basic website functionality</p>
+                        </div>
+
+                        <div class="cookie-option" style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <label style="color: var(--primary-light); font-weight: bold;">Analytics Cookies</label>
+                                <input type="checkbox" checked style="width: 20px; height: 20px;">
+                            </div>
+                            <p style="color: #888; font-size: 0.9rem;">Help us understand how visitors interact with our website</p>
+                        </div>
+
+                        <div class="cookie-option" style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <label style="color: var(--primary-light); font-weight: bold;">Marketing Cookies</label>
+                                <input type="checkbox" style="width: 20px; height: 20px;">
+                            </div>
+                            <p style="color: #888; font-size: 0.9rem;">Used to deliver personalized advertisements</p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <button class="btn btn-primary" onclick="alert('Cookie preferences saved!')">Save Preferences</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="policy-nav">
+            <a href="privacy-policy.html" class="policy-nav-btn" title="Privacy Policy">
+                <i class="fas fa-shield-alt"></i>
+            </a>
+            <a href="terms-of-service.html" class="policy-nav-btn" title="Terms of Service">
+                <i class="fas fa-file-contract"></i>
+            </a>
+            <button class="policy-nav-btn" onclick="flipCookiePage()" title="Flip Page">
+                <i class="fas fa-exchange-alt"></i>
+            </button>
+            <a href="index.html" class="policy-nav-btn" title="Back to Portfolio">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function flipCookiePage() {
+            const book = document.getElementById('cookieBook');
+            book.classList.toggle('flipped');
+        }
+
+        // Auto-flip after 6 seconds for demo
+        setTimeout(() => {
+            if (!document.getElementById('cookieBook').classList.contains('flipped')) {
+                flipCookiePage();
+            }
+        }, 6000);
+    </script>
+</body>
+</html>

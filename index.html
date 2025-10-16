@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nk - Creative Designer & Developer | Nana Kwesi</title>
+    <meta name="description" content="Nk - Creative Designer & Developer | Nana Kwesi - Professional project showcasing innovative design and development work">
+    <meta name="keywords" content="project, designer, developer, web design, creative, modern">
+    <meta name="author" content="Nana Kwesi">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <span class="logo-text">Nk</span>
+                <span class="logo-dot"></span>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner-modern"></div>
+            </div>
+            <div class="loading-text">My Portfolio</div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="welcome-messages">
+                <div class="welcome-message active" data-lang="en">Welcome</div>
+                <div class="welcome-message" data-lang="es">Bienvenido</div>
+                <div class="welcome-message" data-lang="fr">Bienvenue</div>
+                <div class="welcome-message" data-lang="de">Willkommen</div>
+                <div class="welcome-message" data-lang="it">Benvenuto</div>
+                <div class="welcome-message" data-lang="pt">Bem-vindo</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Cursor Effect -->
+    <div id="cursor-effect" class="cursor-effect"></div>
+    <div id="cursor-trail" class="cursor-trail"></div>
+
+    <!-- Modern Vertical Scroll Navigation -->
+    <div class="scroll-nav">
+      <ul>
+        <li><a href="#home" class="scroll-dot active" data-tooltip="Home"></a></li>
+        <li><a href="#about" class="scroll-dot" data-tooltip="About"></a></li>
+        <li><a href="#services" class="scroll-dot" data-tooltip="Services"></a></li>
+        <li><a href="#project" class="scroll-dot" data-tooltip="Projects"></a></li>
+        <li><a href="#testimonials" class="scroll-dot" data-tooltip="Testimonials"></a></li>
+        <li><a href="#blog" class="scroll-dot" data-tooltip="Blog"></a></li>
+        <li><a href="#contact" class="scroll-dot" data-tooltip="Contact"></a></li>
+        <li><a href="#footer" class="scroll-dot" data-tooltip="Footer"></a></li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-brand">
+                    <a href="#home" class="brand-link">
+                        <span class="brand-text">Nk</span>
+                        <span class="brand-dot"></span>
+                    </a>
+                </div>
+                
+                <div class="navbar-menu" id="navbar-menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="#project" class="nav-link">Projects</a></li>
+                        <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="navbar-actions">
+                    <div class="navbar-contact">
+                        <span class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:carsonleuders901@gmail.com">carsonleuders901@gmail.com</a>
+                        </span>
+                        <span class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="https://wa.me/233595759917?text=Hello! I would like to get in touch with you." target="_blank">+233 595 759 917</a>
+                        </span>
+                    </div>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-image-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- Video Player (initially hidden) -->
+            <div class="hero-video-player" id="hero-video-player">
+                <video id="hero-video" preload="metadata" poster="images/preimage.png">
+                    <source src="images/3114534-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                    <button id="video-play-pause" class="video-control-btn">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button id="video-close" class="video-control-btn video-close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="video-progress">
+                        <div id="video-progress-bar" class="video-progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="hero-title">
+                            <span class="title-line">Creative Ideas</span>
+                            <span class="title-line">Come From</span>
+                            <span class="title-line highlight">Nature</span>
+                        </h1>
+                        <p class="hero-subtitle">I craft digital experiences whilst interacting with your business growth & stay at the top of innovation</p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary" id="watch-video-btn">
+                                <i class="fas fa-play"></i>
+                                Watch Video
+                            </button>
+                            <a href="resume.txt/resume.txt" class="btn btn-secondary" download>Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll">
+                <div class="scroll-indicator">
+                    <span class="scroll-text">Scroll Down</span>
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image" data-aos="fade-right" data-aos-duration="800">
+                        <div class="image-wrapper">
+                            <img src="images/Snapchat-2059510284.jpg" alt="Profile Image" class="profile-image">
+                            <div class="image-overlay">
+                                <div class="social-links">
+                                    <a href="https://x.com/Nanaba_KK" class="social-link twitter-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/in/carsonleuders901@gmail.com" class="social-link linkedin-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://github.com/Carsgod" class="social-link github-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="https://instagram.com/nana_kwesigiant" class="social-link instagram-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    
+                    <div class="about-text" data-aos="fade-left" data-aos-duration="800">
+                        <div class="section-header">
+                            <span class="section-tag">About Me</span>
+                            <h2 class="section-title">Passionate Designer & Developer</h2>
+                        </div>
+                        
+                        <p class="about-description">
+                            I'm a creative professional with over 4 years of experience in web design and development. 
+                            I specialize in creating unique digital experiences that combine beautiful aesthetics with 
+                            functional user interfaces.
+                        </p>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="30">30</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="25">25</div>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="4">4</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="14">14</div>
+                                <div class="stat-label">Technologies Mastered</div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-actions">
+                            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                            <a href="https://carsgod.github.io/MY-CV/" class="btn btn-outline" download>
+                                <i class="fas fa-download"></i>
+                                Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     <!-- CAROUSEL OVERLAY SECTION -->
+    <div class="carousel-container">
+      <div class="fade fade-left"></div>
+      <div class="fade fade-right"></div>
+
+      <div class="carousel-track">
+        <img src="images/carousal 1.jpeg" alt="Carousel Image 1">
+        <img src="images/carousal 2.jpeg" alt="Carousel Image 2">
+        <img src="images/carousal 3.jpeg" alt="Carousel Image 3">
+        <img src="images/carousal 4.jpeg" alt="Carousel Image 4">
+        <img src="images/carousal 5.jpeg" alt="Carousel Image 5">
+        <img src="images/carousal 6.jpg" alt="Carousel Image 6">
+      </div>
+    </div>
+
+
+        <!-- Services Section -->
+        <section id="services" class="services services-scroll-animate">
+            <!-- Galaxy Background Canvas -->
+            <canvas id="services-galaxy" class="services-galaxy-canvas"></canvas>
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
+                    <span class="section-tag">WHAT I CAN DO FOR YOU.</span>
+                </div>
+
+                <div class="services-showcase">
+                    <div class="service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <div class="service-content">
+                            <h2 class="service-title">Web Development</h2>
+                            <p class="service-description">Custom web applications built with modern technologies like React, Node.js, and TypeScript</p>
+                            <div class="service-features">
+                                <span class="feature">React & Next.js</span>
+                                <span class="feature">Node.js & Express</span>
+                                <span class="feature">TypeScript</span>
+                            </div>
+                            <a href="#project" class="service-btn" onclick="filterPortfolio('mobile')">VIEW</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <div class="service-content">
+                            <h2 class="service-title">UI/UX Design</h2>
+                            <p class="service-description">Beautiful and intuitive user interfaces designed with user experience as the top priority</p>
+                            <div class="service-features">
+                                <span class="feature">Figma & Sketch</span>
+                                <span class="feature">Prototyping</span>
+                                <span class="feature">User Research</span>
+                            </div>
+                            <a href="#project" class="service-btn" onclick="filterPortfolio('branding')">VIEW</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <div class="service-content">
+                            <h2 class="service-title">Mobile Apps</h2>
+                            <p class="service-description">Native and cross-platform mobile applications for iOS and Android devices</p>
+                            <div class="service-features">
+                                <span class="feature">React Native</span>
+                                <span class="feature">Flutter</span>
+                                <span class="feature">iOS & Android</span>
+                            </div>
+                            <a href="#project" class="service-btn" onclick="filterPortfolio('web')">VIEW</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <div class="service-content">
+                            <h2 class="service-title">Digital Marketing</h2>
+                            <p class="service-description">Strategic digital marketing campaigns to increase your online presence and reach</p>
+                            <div class="service-features">
+                                <span class="feature">SEO Optimization</span>
+                                <span class="feature">Social Media</span>
+                                <span class="feature">Content Strategy</span>
+                            </div>
+                            <a href="#project" class="service-btn" onclick="filterPortfolio('web')">VIEW</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                        <div class="service-content">
+                            <h2 class="service-title">E-Commerce</h2>
+                            <p class="service-description">Complete e-commerce solutions with payment integration and inventory management</p>
+                            <div class="service-features">
+                                <span class="feature">Shopify</span>
+                                <span class="feature">WooCommerce</span>
+                                <span class="feature">Payment Gateway</span>
+                            </div>
+                            <a href="#project" class="service-btn" onclick="filterPortfolio('web')">VIEW</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                        <div class="service-content">
+                            <h2 class="service-title">Cloud Solutions</h2>
+                            <p class="service-description">Scalable cloud infrastructure and deployment solutions for modern applications</p>
+                            <div class="service-features">
+                                <span class="feature">AWS & Azure</span>
+                                <span class="feature">DevOps</span>
+                                <span class="feature">CI/CD Pipeline</span>
+                            </div>
+                            <a href="#project" class="service-btn" onclick="filterPortfolio('web')">VIEW</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Logo Carousel Section -->
+        <section class="logo-carousel">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
+                    
+                    <h2 class="section-title">Tools I Love</h2>
+                </div>
+
+                <div class="logo-carousel-container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="logo-track">
+                        <!-- First set of logos -->
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Linear" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/railway/railway-original.svg" alt="Raycast" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Framer" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg" alt="Webflow" class="logo-img">
+                        </div>
+
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg" alt="Linear" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/railway/railway-original.svg" alt="Railway" class="logo-img">
+                        </div>
+                        <div class="logo-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="logo-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Section -->
+        <section id="project" class="project">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">My Projects</h2>
+                    <p class="section-description">Here are some of the projects I've worked on recently</p>
+                </div>
+
+                <div class="project-grid">
+                    <div class="project-item">
+                        <div class="project-featured">Featured</div>
+                        <div class="project-image">
+                            <img src="images/project%201.png" alt="CROWNE Website">
+                            <div class="project-category">Web Development</div>
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h3 class="project-title">CROWNE Luxury Hotel</h3>
+                                    <p class="project-description">A sophisticated luxury hotel website featuring modern design, seamless booking system, and elegant visual aesthetics that reflect premium hospitality.</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">HTML5</span>
+                                        <span class="tech-badge">CSS3</span>
+                                        <span class="tech-badge">JavaScript</span>
+                                        <span class="tech-badge">Responsive</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://carsgod.github.io/CROWNE-website/" class="project-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="https://github.com/Carsgod/THE-CROWNE-website.git" class="project-link" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-particles">
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="images/mobile game.webp" alt="Mobile Game App">
+                            <div class="project-category">Mobile App</div>
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h3 class="project-title">Downhill Racing Game</h3>
+                                    <p class="project-description">An addictive mobile racing game with stunning graphics, smooth controls, and engaging gameplay mechanics for endless entertainment.</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">Unity</span>
+                                        <span class="tech-badge">C#</span>
+                                        <span class="tech-badge">Mobile</span>
+                                        <span class="tech-badge">Gaming</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://play.google.com/store/apps/details?id=io.supercent.downhill&hl=en" class="project-link" target="_blank">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-particles">
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="images/project%204.png" alt="Signature GH">
+                            <div class="project-category">Real Estate</div>
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h3 class="project-title">Signature GH Property</h3>
+                                    <p class="project-description">Premium real estate platform showcasing luxury property in Ghana with advanced filtering, virtual tours, and seamless booking experience.</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">WordPress</span>
+                                        <span class="tech-badge">PHP</span>
+                                        <span class="tech-badge">MySQL</span>
+                                        <span class="tech-badge">Bootstrap</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://signaturegh.com/#" class="project-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="https://signaturegh.com/#" class="project-link" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-particles">
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop" alt="E-Commerce Platform">
+                            <div class="project-category">E-Commerce</div>
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h3 class="project-title">Tisu E-Commerce</h3>
+                                    <p class="project-description">Modern e-commerce platform with secure payment processing, inventory management, and intuitive shopping experience for customers.</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">React</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">MongoDB</span>
+                                        <span class="tech-badge">Stripe</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://tisu.com.gh/" class="project-link" target="_blank">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-particles">
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="images/office-background-time-405wcu578pe026jw.webp" alt="Portfolio Website">
+                            <div class="project-category">Portfolio</div>
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h3 class="project-title">Creative Portfolio</h3>
+                                    <p class="project-description">Elegant portfolio showcase featuring smooth animations, modern design principles, and interactive elements that highlight creative work.</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">HTML5</span>
+                                        <span class="tech-badge">CSS3</span>
+                                        <span class="tech-badge">JavaScript</span>
+                                        <span class="tech-badge">GSAP</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="#" class="project-link" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-particles">
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="images/last project.webp" alt="Fitness App">
+                            <div class="project-category">Mobile App</div>
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h3 class="project-title">Fitness Tracker Pro</h3>
+                                    <p class="project-description">Comprehensive fitness application with workout tracking, progress monitoring, and personalized training plans for health enthusiasts.</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">React Native</span>
+                                        <span class="tech-badge">Firebase</span>
+                                        <span class="tech-badge">HealthKit</span>
+                                        <span class="tech-badge">Redux</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://play.google.com/store/apps/details?id=homeworkoutapp.homeworkout.fitness.workout.loseweight" class="project-link" target="_blank">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-particles">
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                                <div class="particle-project"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
+                    
+                    <h2 class="section-title">What Clients Say</h2>
+                    <p class="section-description">Don't just take my word for it - hear from the people I've worked with</p>
+                </div>
+
+                <div class="testimonials-slider" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="slider-container">
+                        <div class="testimonial-slide active" data-slide="0">
+                            <div class="oval-liquid-wrapper">
+                                <div class="liquid-oval">
+                                    <div class="liquid-content">
+                                        <div class="testimonial-text">
+                                            "Working with Nana was an absolute pleasure. His attention to detail and creative vision brought our project to life in ways we never imagined possible."
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <div class="author-avatar">
+                                                <img src="images/60f7d257-a792-4cce-88ee-95a1fe7db552.avif" alt="Emmefa Ansah" class="avatar-img">
+                                            </div>
+                                            <div class="author-info">
+                                                <h4 class="author-name">Emmefa Ansah</h4>
+                                                <p class="author-title">CEO, GEFA CONSULT</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="liquid-shine"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide" data-slide="1">
+                            <div class="oval-liquid-wrapper">
+                                <div class="liquid-oval">
+                                    <div class="liquid-content">
+                                        <div class="testimonial-text">
+                                            "The quality of work delivered exceeded our expectations. Nana's professionalism and expertise in both design and development made our collaboration seamless."
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <div class="author-avatar">
+                                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Michael Chen" class="avatar-img">
+                                            </div>
+                                            <div class="author-info">
+                                                <h4 class="author-name">Michael Chen</h4>
+                                                <p class="author-title">Founder, StartupXYZ</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="liquid-shine"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide" data-slide="2">
+                            <div class="oval-liquid-wrapper">
+                                <div class="liquid-oval">
+                                    <div class="liquid-content">
+                                        <div class="testimonial-text">
+                                            "Incredible attention to detail and a true understanding of user experience. Our website traffic increased by 200% after Nana's redesign."
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <div class="author-avatar">
+                                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Emily Rodriguez" class="avatar-img">
+                                            </div>
+                                            <div class="author-info">
+                                                <h4 class="author-name">Emily Rodriguez</h4>
+                                                <p class="author-title">Marketing Director, GrowthCo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="liquid-shine"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide" data-slide="3">
+                            <div class="oval-liquid-wrapper">
+                                <div class="liquid-oval">
+                                    <div class="liquid-content">
+                                        <div class="testimonial-text">
+                                            "Nana's innovative approach to design transformed our brand identity completely. The new visual direction has strengthened our market position across West Africa."
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <div class="author-avatar">
+                                                <img src="images/testi.jpeg" alt="Amara Okafor" class="avatar-img">
+                                            </div>
+                                            <div class="author-info">
+                                                <h4 class="author-name">Amara Okafor</h4>
+                                                <p class="author-title">Brand Director, TECHCORP.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="liquid-shine"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide" data-slide="4">
+                            <div class="oval-liquid-wrapper">
+                                <div class="liquid-oval">
+                                    <div class="liquid-content">
+                                        <div class="testimonial-text">
+                                            "Nana's expertise in web development transformed our online presence completely. The modern, responsive website has increased our customer engagement by 300% and streamlined our booking process significantly."
+                                        </div>
+                                        <div class="testimonial-author">
+                                            <div class="author-avatar">
+                                                <img src="images/man.jpeg" alt="Joseph Nkrumah" class="avatar-img">
+                                            </div>
+                                            <div class="author-info">
+                                                <h4 class="author-name">Joseph Nkrumah</h4>
+                                                <p class="author-title">CEO, Signature GH</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="liquid-shine"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Navigation -->
+                    <div class="slider-navigation">
+                        <button class="slider-btn prev-btn" aria-label="Previous testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="slider-dots">
+                            <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                            <button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
+                            <button class="dot" data-slide="2" aria-label="Go to slide 3"></button>
+                            <button class="dot" data-slide="3" aria-label="Go to slide 4"></button>
+                            <button class="dot" data-slide="4" aria-label="Go to slide 5"></button>
+                        </div>
+                        <button class="slider-btn next-btn" aria-label="Next testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                   
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
+                    <span class="section-tag">Latest News</span>
+                    <h2 class="section-title">From The Blog</h2>
+                    <p class="section-description">Insights, tutorials, and thoughts on design and development</p>
+                </div>
+                
+                <div class="blog-grid">
+                    <article class="blog-card featured" data-aos="fade-up" data-aos-duration="800">
+                        <div class="blog-image">
+                            <img src="images/thumbnail01.webp" alt="Blog Post 1">
+                            <div class="blog-category">Design</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="far fa-calendar"></i> March 15, 2024</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h3 class="blog-title">The Future of Web Design: Trends And Emerging Technologies.</h3>
+                            <p class="blog-excerpt">Exploring the latest design trends and technologies that are shaping the future of web development...</p>
+                            <a href="https://www.nucamp.co/blog/coding-bootcamp-web-development-fundamentals-the-future-of-web-development-trends-and-emerging-technologies" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <div class="blog-image">
+                            <img src="images/banniere-article-WP-dhiWise-1536x864.png" alt="Blog Post 2">
+                            <div class="blog-category">Development</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="far fa-calendar"></i> March 10, 2024</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                            <h3 class="blog-title">Building Scalable React Applications</h3>
+                            <p class="blog-excerpt">Best practices for building maintainable and scalable React applications in 2024...</p>
+                            <a href="https://welovedevs.com/articles/scalable-react-app/" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <div class="blog-image">
+                            <img src="images/Color Pyschology-Featured-01_72 (1) (1)-1.webp" alt="Blog Post 3">
+                            <div class="blog-category">Branding</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="far fa-calendar"></i> March 5, 2024</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h3 class="blog-title">The Psychology of Color in Branding</h3>
+                            <p class="blog-excerpt">Understanding how colors influence perception and behavior in brand design...</p>
+                            <a href="https://blog.hubspot.com/the-hustle/psychology-of-color" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Hidden blog posts - shown when "View All Posts" is clicked -->
+                    <article class="blog-card hidden-post" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <div class="blog-image">
+                            <img src="images/responsive design.jpeg" alt="responsive design Post 4">
+                            <div class="blog-category">Tutorial</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="far fa-calendar"></i> February 28, 2024</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 10 min read</span>
+                            </div>
+                            <h3 class="blog-title">Complete Guide to Responsive Web Design</h3>
+                            <p class="blog-excerpt">Learn how to create websites that work perfectly on all devices with modern responsive design techniques...</p>
+                            <a href="https://www.reddit.com/r/css/comments/1c24nl6/finally_understand_responsive_design/" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card hidden-post" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <div class="blog-image">
+                            <img src="images/ai.jpeg" alt="Blog Post 5">
+                            <div class="blog-category">Technology</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="far fa-calendar"></i> February 20, 2024</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3 class="blog-title">The Rise of AI in Web Development</h3>
+                            <p class="blog-excerpt">Exploring how artificial intelligence is revolutionizing the way we build and maintain websites...</p>
+                            <a href="https://www.designrush.com/agency/web-development-companies/trends/ai-and-web-development" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card hidden-post" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                        <div class="blog-image">
+                            <img src="images/freelance.jpeg" alt="Blog Post 6">
+                            <div class="blog-category">Business</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="far fa-calendar"></i> February 15, 2024</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h3 class="blog-title">Freelancing in 2024: What You Need to Know</h3>
+                            <p class="blog-excerpt">Essential tips and strategies for successful freelancing in the modern digital landscape...</p>
+                            <a href="https://nick-nolan.medium.com/the-simple-way-to-start-freelancing-in-2024-f9f806d58183" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card hidden-post" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=300&fit=crop" alt="Blog Post 7">
+                            <div class="blog-category">Design</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="far fa-calendar"></i> February 10, 2024</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                            <h3 class="blog-title">Creating Accessible User Interfaces</h3>
+                            <p class="blog-excerpt">Best practices for designing inclusive web experiences that work for everyone...</p>
+                            <a href="https://medium.com/design-ninjas/best-practices-for-designing-accessible-user-interfaces-d937a1585136" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card hidden-post" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                        <div class="blog-image">
+                            <img src="images/download 333.jpeg" alt="Blog Post 8">
+                            <div class="blog-category">Development</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="far fa-calendar"></i> February 5, 2024</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 12 min read</span>
+                            </div>
+                            <h3 class="blog-title">Advanced JavaScript Concepts Explained</h3>
+                            <p class="blog-excerpt">Deep dive into advanced JavaScript concepts including closures, prototypes, and async programming...</p>
+                            <a href="https://www.capicua.com/blog/12-advanced-javascript-concepts" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card hidden-post" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                        <div class="blog-image">
+                            <img src="images/branding.jpeg" alt="Blog Post 9">
+                            <div class="blog-category">Career</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="far fa-calendar"></i> January 30, 2024</span>
+                                <span class="blog-read-time"><i class="far fa-clock"></i> 9 min read</span>
+                            </div>
+                            <h3 class="blog-title">Building a Personal Brand as a Developer</h3>
+                            <p class="blog-excerpt">Strategies for creating a strong personal brand that helps you stand out in the competitive tech industry...</p>
+                            <a href="https://dev.to/getjv/as-a-developer-how-is-your-personal-branding-k83" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="blog-actions text-center" data-aos="fade-up" data-aos-duration="800">
+                    <button id="view-all-posts-btn" class="btn btn-outline">View All Posts</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info" data-aos="fade-right" data-aos-duration="800">
+                        <div class="section-header">
+                            <span class="section-tag">Get In Touch</span>
+                            <h2 class="section-title">Let's Work Together</h2>
+                            <p class="section-description">Have a project in mind? I'd love to hear from you. Send me a message and let's discuss how we can bring your ideas to life.</p>
+                        </div>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Email</h4>
+                                    <a href="mailto:carsonleuders901@gmail.com">carsonleuders901@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>WhatsApp</h4>
+                                    <a href="https://wa.me/233595759917?text=Hello! I would like to get in touch with you." target="_blank">+233 595 759 917</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Location</h4>
+                                    <span>Accra, Ghana</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://x.com/Nanaba_KK" class="social-link twitter-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/carsonleuders901@gmail.com" class="social-link linkedin-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/Carsgod" class="social-link github-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://instagram.com/nana_kwesigiant" class="social-link instagram-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper" data-aos="fade-left" data-aos-duration="800">
+                        <!-- Google Form Container (Hidden by default) -->
+                        <div id="google-form-container" class="form-container hidden">
+                            <div class="google-form-container">
+                                <iframe
+                                    src="https://docs.google.com/forms/d/e/1FAIpQLSfzRQ7UHGSFoxB39vj_IwjKIXs86lKAfMYuGL7bHepj3gFjrg/viewform?embedded=true"
+                                    width="100%"
+                                    height="600"
+                                    frameborder="0"
+                                    marginheight="0"
+                                    marginwidth="0"
+                                    title="Contact Form">
+                                    Loading contact form...
+                                </iframe>
+
+                                <!-- Google Form trigger link inside WhatsApp Form area -->
+                                <div class="whatsapp-trigger-section">
+                                    <p class="whatsapp-trigger-text">
+                                        Prefer Google Forms?
+                                        <button id="show-whatsapp-btn" class="whatsapp-trigger-link">
+                                            <i class="fas fa-google"></i>
+                                            Use Google Form instead
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Form Container (Visible by default) -->
+                        <div id="whatsapp-form-container" class="form-container active">
+                            <div class="whatsapp-form-header">
+                                <h3 class="whatsapp-form-title">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Send via WhatsApp
+                                </h3>
+                                <button id="back-to-form-btn" class="back-to-form-btn" aria-label="Back to contact form">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Back to Form
+                                </button>
+                            </div>
+
+                            <form id="whatsapp-form" class="whatsapp-form">
+                                <div class="form-group">
+                                    <label for="whatsapp-name" class="form-label">Your Name *</label>
+                                    <input type="text" id="whatsapp-name" name="name" class="form-input" required placeholder="Enter your full name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="whatsapp-email" class="form-label">Email Address *</label>
+                                    <input type="email" id="whatsapp-email" name="email" class="form-input" required placeholder="your.email@example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="whatsapp-subject" class="form-label">Subject *</label>
+                                    <input type="text" id="whatsapp-subject" name="subject" class="form-input" required placeholder="What's this about?">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="whatsapp-message" class="form-label">Message *</label>
+                                    <textarea id="whatsapp-message" name="message" class="form-textarea" rows="5" required placeholder="Tell me about your project or inquiry..."></textarea>
+                                </div>
+
+                                <button type="submit" id="whatsapp-send-btn" class="btn btn-whatsapp btn-full">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span class="btn-text">Send to WhatsApp</span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <i class="fas fa-spinner fa-spin"></i> Opening WhatsApp...
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+
+        <!-- Floating Background Elements -->
+        <div class="footer-bg-elements">
+            <div class="footer-float-element float-1"></div>
+            <div class="footer-float-element float-2"></div>
+            <div class="footer-float-element float-3"></div>
+            <div class="footer-float-element float-4"></div>
+            <div class="footer-float-element float-5"></div>
+        </div>
+
+        <!-- Animated Background Pattern -->
+        <div class="footer-pattern"></div>
+
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="brand-logo-elevated">
+                        <div class="brand-logo-container">
+                            <img src="images/footer logo olny.png" alt="Nk Logo" class="footer-logo-img">
+                        </div>
+                        <div class="brand-glow-effect"></div>
+                    </div>
+                    <p class="footer-description">Creative designer and developer passionate about crafting exceptional digital experiences that drive results.</p>
+
+                    <!-- Enhanced Newsletter Section -->
+                    <div class="newsletter-section-elevated">
+                        <div class="newsletter-header">
+                            <h4 class="newsletter-title">
+                                <i class="fas fa-envelope"></i>
+                                Stay Updated
+                            </h4>
+                            <div class="newsletter-badge">New</div>
+                        </div>
+                        <p class="newsletter-subtitle">Get the latest updates, insights, and exclusive content delivered to your inbox</p>
+                        <form class="newsletter-form">
+                            <div class="newsletter-input-group">
+                                <div class="input-wrapper">
+                                    <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                                    <div class="input-glow"></div>
+                                </div>
+                                <button type="submit" class="newsletter-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span class="btn-text">Subscribe</span>
+                                    <div class="btn-ripple"></div>
+                                </button>
+                            </div>
+                            <div class="newsletter-stats">
+                                <span class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>2,500+ subscribers</span>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Enhanced Social Links -->
+                    <div class="footer-social-elevated">
+                        <div class="social-header">
+                            <span class="social-label">Follow Me</span>
+                            <div class="social-line"></div>
+                        </div>
+                        <div class="social-links-grid">
+                            <a href="https://x.com/Nanaba_KK" class="social-link-elevated twitter-link" aria-label="Twitter">
+                                <div class="social-icon-wrapper">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="social-glow"></div>
+                                <span class="social-name">Twitter</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/carsonleuders901@gmail.com" class="social-link-elevated linkedin-link" aria-label="LinkedIn">
+                                <div class="social-icon-wrapper">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="social-glow"></div>
+                                <span class="social-name">LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Carsgod" class="social-link-elevated github-link" aria-label="GitHub">
+                                <div class="social-icon-wrapper">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="social-glow"></div>
+                                <span class="social-name">GitHub</span>
+                            </a>
+                            <a href="https://instagram.com/nana_kwesigiant" class="social-link-elevated instagram-link" aria-label="Instagram">
+                                <div class="social-icon-wrapper">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="social-glow"></div>
+                                <span class="social-name">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Footer Links Grid -->
+                <div class="footer-grid-elevated">
+                    <div class="footer-column">
+                        <div class="column-header">
+                            <h4 class="footer-title">Services</h4>
+                            <div class="column-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">UI/UX Design</a></li>
+                            <li><a href="#services">Mobile Apps</a></li>
+                            <li><a href="#services">Digital Marketing</a></li>
+                            <li><a href="#services">E-Commerce</a></li>
+                            <li><a href="#services">Cloud Solutions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <div class="column-header">
+                            <h4 class="footer-title">Navigation</h4>
+                            <div class="column-icon">
+                                <i class="fas fa-compass"></i>
+                            </div>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#project">My Work</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#blog">Blog Posts</a></li>
+                            <li><a href="#contact">Get In Touch</a></li>
+                            <li><a href="https://carsgod.github.io/MY-CV/" download>Download CV</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <div class="column-header">
+                            <h4 class="footer-title">Resources</h4>
+                            <div class="column-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="#blog">Latest Articles</a></li>
+                            <li><a href="#">Design Tips</a></li>
+                            <li><a href="#">Development Guides</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Free Tools</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <div class="column-header">
+                            <h4 class="footer-title">Contact Info</h4>
+                            <div class="column-icon">
+                                <i class="fas fa-address-card"></i>
+                            </div>
+                        </div>
+                        <div class="contact-info-elevated">
+                            <div class="contact-item-footer">
+                                <div class="contact-icon-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:carsonleuders901@gmail.com">carsonleuders901@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item-footer">
+                                <div class="contact-icon-wrapper">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">WhatsApp</span>
+                                    <a href="https://wa.me/233595759917?text=Hello! I would like to get in touch with you." target="_blank">+233 595 759 917</a>
+                                </div>
+                            </div>
+                            <div class="contact-item-footer">
+                                <div class="contact-icon-wrapper">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Location</span>
+                                    <span>Accra, Ghana</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; 2024 Nk - Carson. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                    </div>
+                </div>
+                <div class="footer-bottom-actions">
+                    <p class="credits">Built with <i class="fas fa-heart"></i> and modern web technologies</p>
+                    <!-- Back to Top Button - Only in Footer -->
+                    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+                        <div class="button-content">
+                            <i class="fas fa-chevron-up"></i>
+                            <span class="button-text">Top</span>
+                        </div>
+                        <div class="button-glow"></div>
+                        <div class="button-particles">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div> 
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>   
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>    
+                            <div class="particle"></div>
+                            <div class="particle"></div>    
+                            <div class="particle"></div>        
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Popup -->
+    <div id="cookie-consent" class="cookie-consent">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-header">
+                <h3 class="cookie-consent-title">🍪 Cookie Settings</h3>
+                <p class="cookie-consent-subtitle">We use cookies to enhance your experience</p>
+            </div>
+
+            <div class="cookie-consent-body">
+                <p class="cookie-consent-text">
+                    This website uses cookies to improve your browsing experience, analyze site traffic, and personalize content. By continuing to use this site, you consent to our use of cookies.
+                </p>
+
+                <div class="cookie-consent-options">
+                    <div class="cookie-option">
+                        <div class="cookie-option-header">
+                            <label class="cookie-checkbox-label">
+                                <input type="checkbox" id="essential-cookies" class="cookie-checkbox" checked disabled>
+                                <span class="cookie-checkbox-custom"></span>
+                                <span class="cookie-checkbox-text">Essential Cookies</span>
+                            </label>
+                            <span class="cookie-required-badge">Required</span>
+                        </div>
+                        <p class="cookie-option-description">Necessary cookies for basic website functionality</p>
+                    </div>
+
+                    <div class="cookie-option">
+                        <div class="cookie-option-header">
+                            <label class="cookie-checkbox-label">
+                                <input type="checkbox" id="analytics-cookies" class="cookie-checkbox">
+                                <span class="cookie-checkbox-custom"></span>
+                                <span class="cookie-checkbox-text">Analytics Cookies</span>
+                            </label>
+                        </div>
+                        <p class="cookie-option-description">Help us understand how visitors interact with our website</p>
+                    </div>
+
+                    <div class="cookie-option">
+                        <div class="cookie-option-header">
+                            <label class="cookie-checkbox-label">
+                                <input type="checkbox" id="marketing-cookies" class="cookie-checkbox">
+                                <span class="cookie-checkbox-custom"></span>
+                                <span class="cookie-checkbox-text">Marketing Cookies</span>
+                            </label>
+                        </div>
+                        <p class="cookie-option-description">Used to deliver personalized advertisements</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cookie-consent-footer">
+                <div class="cookie-consent-buttons">
+                    <button id="cookie-accept" class="cookie-btn btn-primary">Accept All</button>
+                    <button id="cookie-reject" class="cookie-btn btn-outline">Reject All</button>
+                    <button id="cookie-customize" class="cookie-btn btn-outline">Customize</button>
+                </div>
+                <button id="cookie-close" class="cookie-close-btn" aria-label="Close cookie consent">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Cookie Details Modal -->
+        <div id="cookie-details-modal" class="cookie-modal">
+            <div class="cookie-modal-content">
+                <div class="cookie-modal-header">
+                    <h3 class="cookie-modal-title">Cookie Policy Details</h3>
+                    <button class="cookie-modal-close" aria-label="Close cookie details">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="cookie-modal-body">
+                    <div class="cookie-details-section">
+                        <h4>Essential Cookies</h4>
+                        <p>These cookies are necessary for the website to function properly. They cannot be disabled.</p>
+                        <ul>
+                            <li><strong>Session Management:</strong> Maintains your login session</li>
+                            <li><strong>Security:</strong> Protects against CSRF attacks</li>
+                            <li><strong>Preferences:</strong> Remembers your language and display preferences</li>
+                        </ul>
+                    </div>
+
+                    <div class="cookie-details-section">
+                        <h4>Analytics Cookies</h4>
+                        <p>These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
+                        <ul>
+                            <li><strong>Google Analytics:</strong> Tracks page views and user behavior</li>
+                            <li><strong>Performance Monitoring:</strong> Measures site speed and user experience</li>
+                            <li><strong>Error Tracking:</strong> Identifies and fixes website issues</li>
+                        </ul>
+                    </div>
+
+                    <div class="cookie-details-section">
+                        <h4>Marketing Cookies</h4>
+                        <p>These cookies are used to track visitors across websites to display relevant advertisements.</p>
+                        <ul>
+                            <li><strong>Ad Targeting:</strong> Shows personalized advertisements</li>
+                            <li><strong>Social Media:</strong> Enables social media sharing features</li>
+                            <li><strong>Retargeting:</strong> Displays relevant ads on other websites</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

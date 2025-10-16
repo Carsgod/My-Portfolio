@@ -1,0 +1,98 @@
+NANA KWESI
+
+💻 Full Stack Developer | Creative Web Designer
+
+📍 Accra, Ghana | ✉️ carsonleuders901@email.com
+ | 📞 +233 595 759 917
+🔗 LinkedIn
+ | GitHub
+ | Portfolio
+
+PROFESSIONAL SUMMARY
+
+Innovative Full Stack Developer with 3+ years of experience building high-performance, scalable, and user-centric web solutions. Skilled in modern frameworks, cloud technologies, and UI/UX design, with proven success in reducing load times, boosting user engagement, and delivering end-to-end digital products. Passionate about clean code, agile collaboration, and creating impactful digital experiences.
+
+CORE SKILLS
+
+Frontend: HTML5, CSS3, JavaScript (ES6+), React, Vue.js, TypeScript
+
+Backend: Node.js, Express.js, Python, PHP
+
+Databases: MongoDB, MySQL, PostgreSQL
+
+Cloud & Tools: AWS, Firebase, Git, Docker, Webpack, CI/CD Pipelines
+
+Design & UI/UX: Figma, Adobe XD, Photoshop, Responsive Design
+
+PROFESSIONAL EXPERIENCE
+
+Full Stack Developer | Signature GH
+2023 – Present
+
+Engineered responsive web apps using React, Node.js, and MongoDB.
+
+Boosted website performance by 40% through optimization and lazy loading.
+
+Partnered with designers to deliver pixel-perfect, modern interfaces.
+
+Automated deployment workflows, reducing downtime by 30%.
+
+Frontend Developer | Freelance
+2022 – 2023
+
+Delivered custom WordPress themes/plugins and interactive web apps.
+
+Built e-commerce platforms with payment gateway integration.
+
+Drove client satisfaction with timely updates, SEO optimization, and support.
+
+Web Development Intern | Tech Solutions Ltd
+2021 – 2022
+
+Assisted in developing company website and internal dashboards.
+
+Gained practical exposure to agile workflows and team code reviews.
+
+Supported developers in debugging and feature implementation.
+
+PROJECTS
+
+Crowne Apartments Website
+Luxury apartment showcase with booking and advanced filtering.
+Tech: React, Node.js, Express, MongoDB
+🔗 Live Demo
+
+Signature GH Agency Website
+Hospitality website and services platform.
+Tech: WordPress, PHP, MySQL
+🔗 Live Site
+
+Jada Residence Booking Platform
+Modern booking website with virtual tours and interactive UI.
+Tech: HTML, CSS, React, JavaScript
+
+EDUCATION
+
+🎓 B.Sc. Computer Science – University of Ghana, Legon (2018 – 2022)
+
+CERTIFICATIONS
+
+AWS Certified Developer – Associate (2024)
+
+Google Cloud Professional Developer (2024)
+
+Meta React Developer Certificate (2023)
+
+Full Stack Web Development Certificate (2022)
+
+LANGUAGES
+
+English (Native)
+
+Twi (Native)
+
+Spanish (Intermediate)
+
+INTERESTS
+
+🌍 Open Source | ✍🏾 Tech Blogging | 🎨 UI/UX Design | 👨🏾‍💻 Mentorship
