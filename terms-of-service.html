@@ -79,6 +79,10 @@
             overflow-y: auto;
         }
 
+        .no-blur {
+            backdrop-filter: none !important;
+        }
+
         .policy-content.dark {
             background: rgba(17, 24, 39, 0.95);
             color: #e5e5e5;
@@ -514,7 +518,7 @@
                         <p>We comply with all applicable data protection laws including:</p>
                         <ul>
                             <li>General Data Protection Regulation (GDPR)</li>
-                            <li>Data Protection Act 2012 (Ghana)</li>
+                            <li>Data Protection Act, 2012 (Act 843) of Ghana</li>
                             <li>California Consumer Privacy Act (CCPA)</li>
                             <li>Other applicable privacy legislation</li>
                         </ul>
@@ -640,8 +644,11 @@
 
                         <div style="background: rgba(218, 165, 32, 0.1); padding: 1.5rem; border-radius: 0.5rem; margin-top: 1rem;">
                             <h4 style="margin-top: 0; color: var(--primary-color);">Nk Portfolio</h4>
-                            <p><strong>Email:</strong> carsonleuders901@gmail.com</p>
-                            <p><strong>Phone:</strong> +233 595 759 917</p>
+                            <p><strong>Email:</strong> <a href="mailto:carsonleuders9@gmail.com">carsonleuders9@gmail.com</a></p>
+                            <!-- Or use a contact form link:
+                            <p><strong>Contact Form:</strong> <a href="contact.html">Submit an inquiry</a></p>
+                            -->
+                            <p><strong>Phone:</strong> +233598055980</p>
                             <p><strong>Address:</strong> Accra, Ghana</p>
                             <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM GMT</p>
                         </div>
@@ -661,6 +668,12 @@
 
                         <h4>19.2 Acceptance of Terms</h4>
                         <p>By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+                        <!-- Accessibility: Blur Toggle -->
+                        <div style="text-align: right; margin-top: 1rem;">
+                            <button id="toggleBlurBtn" style="background: var(--primary-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.3rem; cursor: pointer;">
+                                Disable Blur Effect
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -719,6 +732,24 @@
             const book = document.getElementById('termsBook');
             book.classList.toggle('flipped');
         }
+
+        // Accessibility: Blur Toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const blurBtn = document.getElementById('toggleBlurBtn');
+            const policyContent = document.querySelector('.policy-content');
+            let blurDisabled = false;
+
+            blurBtn.addEventListener('click', function () {
+                blurDisabled = !blurDisabled;
+                if (blurDisabled) {
+                    policyContent.classList.add('no-blur');
+                    blurBtn.textContent = 'Enable Blur Effect';
+                } else {
+                    policyContent.classList.remove('no-blur');
+                    blurBtn.textContent = 'Disable Blur Effect';
+                }
+            });
+        });
 
         // Auto-flip after 7 seconds for demo
         setTimeout(() => {
