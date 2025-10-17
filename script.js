@@ -564,24 +564,24 @@ class PortfolioFilter {
 // ===== WHATSAPP INTEGRATION =====
 
 class WhatsAppIntegration {
-   constructor() {
-      this.showWhatsAppBtn = null;
-      this.backToFormBtn = null;
-      this.whatsappFormContainer = null;
-      this.googleFormContainer = null;
-      this.whatsappForm = null;
-      this.sendBtn = null;
-      this.showWhatsAppBtn = document.getElementById('show-whatsapp-btn');
-      this.backToFormBtn = document.getElementById('back-to-form-btn');
-      this.whatsappFormContainer = document.getElementById('whatsapp-form-container');
-      this.googleFormContainer = document.getElementById('google-form-container');
-      this.whatsappForm = document.getElementById('whatsapp-form');
-      this.sendBtn = document.getElementById('whatsapp-send-btn');
-      this.init();
-   }
+    constructor() {
+       this.showWhatsAppFormBtn = null;
+       this.backToContactFormBtn = null;
+       this.whatsappFormContainer = null;
+       this.contactFormContainer = null;
+       this.whatsappForm = null;
+       this.sendBtn = null;
+       this.showWhatsAppFormBtn = document.getElementById('show-whatsapp-form-btn');
+       this.backToContactFormBtn = document.getElementById('back-to-contact-form-btn');
+       this.whatsappFormContainer = document.getElementById('whatsapp-form-container');
+       this.contactFormContainer = document.getElementById('contact-form-container');
+       this.whatsappForm = document.getElementById('whatsapp-form');
+       this.sendBtn = document.getElementById('whatsapp-send-btn');
+       this.init();
+    }
 
    init() {
-      if (!this.showWhatsAppBtn || !this.backToFormBtn || !this.whatsappFormContainer || !this.googleFormContainer) {
+      if (!this.showWhatsAppFormBtn || !this.backToContactFormBtn || !this.whatsappFormContainer || !this.contactFormContainer) {
          console.error('WhatsApp integration elements not found');
          return;
       }
@@ -592,14 +592,14 @@ class WhatsAppIntegration {
 
    bindEvents() {
       // Show WhatsApp form when trigger button is clicked
-      this.showWhatsAppBtn?.addEventListener('click', (e) => {
+      this.showWhatsAppFormBtn?.addEventListener('click', (e) => {
          e.preventDefault();
          this.showWhatsAppForm();
       });
 
-      // Go back to Google Form
-      this.backToFormBtn?.addEventListener('click', () => {
-         this.showGoogleForm();
+      // Go back to contact form
+      this.backToContactFormBtn?.addEventListener('click', () => {
+         this.showContactForm();
       });
 
       // Handle WhatsApp form submission
@@ -617,9 +617,9 @@ class WhatsAppIntegration {
    }
 
    showWhatsAppForm() {
-      // Hide Google Form container
-      this.googleFormContainer?.classList.remove('active');
-      this.googleFormContainer?.classList.add('hidden');
+      // Hide contact form container
+      this.contactFormContainer?.classList.remove('active');
+      this.contactFormContainer?.classList.add('hidden');
 
       // Show WhatsApp Form container
       this.whatsappFormContainer?.classList.add('active');
@@ -634,10 +634,10 @@ class WhatsAppIntegration {
       console.log('Switched to WhatsApp form');
    }
 
-   showGoogleForm() {
-      // Show Google Form container
-      this.googleFormContainer?.classList.add('active');
-      this.googleFormContainer?.classList.remove('hidden');
+   showContactForm() {
+      // Show contact form container
+      this.contactFormContainer?.classList.add('active');
+      this.contactFormContainer?.classList.remove('hidden');
 
       // Hide WhatsApp Form container
       this.whatsappFormContainer?.classList.remove('active');
@@ -647,7 +647,7 @@ class WhatsAppIntegration {
       this.whatsappForm?.reset();
       this.clearAllErrors();
 
-      console.log('Switched back to Google form');
+      console.log('Switched back to contact form');
    }
 
    validateField(field) {

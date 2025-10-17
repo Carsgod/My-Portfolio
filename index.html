@@ -950,43 +950,60 @@
                     </div>
                     
                     <div class="contact-form-wrapper" data-aos="fade-left" data-aos-duration="800">
-                        <!-- Google Form Container (Hidden by default) -->
-                        <div id="google-form-container" class="form-container hidden">
-                            <div class="google-form-container">
-                                <iframe
-                                    src="https://docs.google.com/forms/d/e/1FAIpQLSfzRQ7UHGSFoxB39vj_IwjKIXs86lKAfMYuGL7bHepj3gFjrg/viewform?embedded=true"
-                                    width="100%"
-                                    height="600"
-                                    frameborder="0"
-                                    marginheight="0"
-                                    marginwidth="0"
-                                    title="Contact Form">
-                                    Loading contact form...
-                                </iframe>
-
-                                <!-- Google Form trigger link inside WhatsApp Form area -->
-                                <div class="whatsapp-trigger-section">
-                                    <p class="whatsapp-trigger-text">
-                                        Prefer Google Forms?
-                                        <button id="show-whatsapp-btn" class="whatsapp-trigger-link">
-                                            <i class="fas fa-google"></i>
-                                            Use Google Form instead
-                                        </button>
-                                    </p>
-                                </div>
+                        <!-- Regular Contact Form Container (Visible by default) -->
+                        <div id="contact-form-container" class="form-container active">
+                            <div class="contact-form-header">
+                                <h3 class="contact-form-title">
+                                    <i class="fas fa-envelope"></i>
+                                    Send Message
+                                </h3>
+                                <button id="show-whatsapp-form-btn" class="whatsapp-toggle-btn" aria-label="Switch to WhatsApp form">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Use WhatsApp Instead
+                                </button>
                             </div>
+
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-group">
+                                    <label for="contact-name" class="form-label">Your Name *</label>
+                                    <input type="text" id="contact-name" name="name" class="form-input" required placeholder="Enter your full name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contact-email" class="form-label">Email Address *</label>
+                                    <input type="email" id="contact-email" name="email" class="form-input" required placeholder="your.email@example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contact-subject" class="form-label">Subject *</label>
+                                    <input type="text" id="contact-subject" name="subject" class="form-input" required placeholder="What's this about?">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contact-message" class="form-label">Message *</label>
+                                    <textarea id="contact-message" name="message" class="form-textarea" rows="5" required placeholder="Tell me about your project or inquiry..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <i class="fas fa-spinner fa-spin"></i> Sending...
+                                    </span>
+                                </button>
+                            </form>
                         </div>
 
-                        <!-- WhatsApp Form Container (Visible by default) -->
-                        <div id="whatsapp-form-container" class="form-container active">
+                        <!-- WhatsApp Form Container (Hidden by default) -->
+                        <div id="whatsapp-form-container" class="form-container hidden">
                             <div class="whatsapp-form-header">
                                 <h3 class="whatsapp-form-title">
                                     <i class="fab fa-whatsapp"></i>
                                     Send via WhatsApp
                                 </h3>
-                                <button id="back-to-form-btn" class="back-to-form-btn" aria-label="Back to contact form">
+                                <button id="back-to-contact-form-btn" class="back-to-form-btn" aria-label="Back to contact form">
                                     <i class="fas fa-arrow-left"></i>
-                                    Back to Form
+                                    Back to Email Form
                                 </button>
                             </div>
 
