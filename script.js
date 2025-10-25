@@ -3190,10 +3190,32 @@ class BlogPostsManager {
    }
 }
 
+// Project overlay click handler
+document.addEventListener('DOMContentLoaded', function() {
+    const projectImages = document.querySelectorAll('.project-image');
+
+    projectImages.forEach(image => {
+        image.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') return; // If clicking on link, don't show overlay
+
+            const overlay = image.querySelector('.project-overlay');
+
+            if (overlay) {
+                overlay.classList.toggle('active');
+
+                // Auto-hide after 5 seconds
+                setTimeout(() => {
+                    overlay.classList.remove('active');
+                }, 5000);
+            }
+        });
+    });
+});
+
 // Initialize the blog posts functionality when script loads
 document.addEventListener('DOMContentLoaded', function() {
-   const blogManager = new BlogPostsManager();
-   window.blogManager = blogManager; // Add to global scope for debugging
+    const blogManager = new BlogPostsManager();
+    window.blogManager = blogManager; // Add to global scope for debugging
 });
       this.components.push(new MobileNav());
       this.components.push(new ThemeToggle());
